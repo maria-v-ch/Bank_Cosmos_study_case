@@ -72,16 +72,19 @@ if __name__ == '__main__':
               '8  - Статистика по ожидаемым пополнениям - 8\n'
               '9  - Фильтровать ожидаемые пополнения    - 9\n'
               '10 - Выйти из программы                  - 10\n')
-        try:
-            operation_choice = int(input("Введите НОМЕР нужной ОПЕРАЦИИ: "))
-            if 1 <= operation_choice < 11:
-                pass
-            else:
-                raise ValueError
-        except ValueError:
-            print(f'Чтобы перейти к нужной операции, введите соответствующий номер '
-                  f'операции (1-9). Другие символы не распознаются.')
-            continue
+
+        operation_choice = int(input("Введите НОМЕР нужной ОПЕРАЦИИ: "))
+
+        # try:
+        #     operation_choice = int(input("Введите НОМЕР нужной ОПЕРАЦИИ: "))
+        #     if 1 <= operation_choice < 11:
+        #         pass
+        #     else:
+        #         raise ValueError
+        # except ValueError:
+        #     print(f'Чтобы перейти к нужной операции, введите соответствующий номер '
+        #           f'операции (1-9). Другие символы не распознаются.')
+        #     continue
 
         if operation_choice == 1:
             print(f'Приступим к созданию аккаунта в банке Космос.')
