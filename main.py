@@ -38,6 +38,7 @@ def main():
 
 
 if __name__ == '__main__':
+    main()
     print(f'Добро пожаловать в банк КОСМОС!')
     option = input(f'Вы хотите восстановить сохраненные ранее данные? Введите "да" или "нет": ').lower()
     main()
@@ -75,16 +76,16 @@ if __name__ == '__main__':
 
         operation_choice = int(input("Введите НОМЕР нужной ОПЕРАЦИИ: "))
 
-        # try:
-        #     operation_choice = int(input("Введите НОМЕР нужной ОПЕРАЦИИ: "))
-        #     if 1 <= operation_choice < 11:
-        #         pass
-        #     else:
-        #         raise ValueError
-        # except ValueError:
-        #     print(f'Чтобы перейти к нужной операции, введите соответствующий номер '
-        #           f'операции (1-9). Другие символы не распознаются.')
-        #     continue
+        try:
+            operation_choice = int(input("Введите НОМЕР нужной ОПЕРАЦИИ: "))
+            if 1 <= operation_choice < 11:
+                pass
+            else:
+                raise ValueError
+        except ValueError:
+            print(f'Чтобы перейти к нужной операции, введите соответствующий номер '
+                  f'операции (1-10). Другие символы не распознаются.')
+            continue
 
         if operation_choice == 1:
             print(f'Приступим к созданию аккаунта в банке Космос.')
